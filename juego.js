@@ -5,7 +5,7 @@
    ============================================================ */
 const CARPETA = "img/"; // La barra final es importante para formar las rutas.
 const IMG = {
-  fondo:     CARPETA + "fondo.jpg",
+  fondo:     CARPETA + "fondo.webp",
   cubo:      CARPETA + "cubo.jpg",
   titulo:    CARPETA + "titulo.png",
   victoria:  CARPETA + "victoria.jpg"
@@ -17,7 +17,7 @@ const RESPALDOS = {
   victoria:  CARPETA + "victoria.svg"
 };
 // Imágenes usadas tanto para los sustos como para la criatura que te persigue.
-const SUSTOS = ["susto1.jpg", "susto2.jpg", "susto3.jpg", "susto4.jpg", "susto5.jpg", "susto6.jpg"];
+const SUSTOS = ["susto1.jpg", "susto2.jpg", "susto3.jpg", "susto4.jpg", "susto5.jpg"];
 
 const $ = id => document.getElementById(id);
 const cFondo = $('fondo'), cJuego = $('juego'), cOsc = $('oscuridad');
@@ -64,9 +64,14 @@ for (const k in IMG) {
 asignarImagen($('imgTitulo'), IMG.titulo, RESPALDOS.titulo);
 asignarImagen($('imgVictoria'), IMG.victoria, RESPALDOS.victoria);
 
-const SU = SUSTOS.map((nombre, indice) =>
-  cargarImagen(CARPETA + nombre, CARPETA + `susto${indice + 1}.svg`)
-);
+// Precarga exclusivamente los cinco screamers que vinieron en el archivo del usuario.
+const SU = SUSTOS.map(nombre => {
+  const imagen = new Image();
+  imagen.onload = () => console.log("Screamer cargado:", nombre);
+  imagen.onerror = () => console.error("No se pudo cargar el screamer:", CARPETA + nombre);
+  imagen.src = CARPETA + nombre;
+  return imagen;
+});
 const ok = i => i && i.complete && i.naturalWidth > 0;
 
 // ---- Parámetros ----
@@ -171,7 +176,13 @@ function perder() {
   if (estado !== 'jugando') return;
   estado = 'muerto';
   const indiceSusto = Math.floor(Math.random() * SUSTOS.length);
-  asignarImagen($('imgScare'), CARPETA + SUSTOS[indiceSusto], CARPETA + `susto${indiceSusto + 1}.svg`);
+  const imagenSusto = $('imgScare');
+  imagenSusto.style.display = 'block';
+  imagenSusto.onerror = () => {
+    imagenSusto.style.display = 'none';
+    console.error('No se pudo mostrar el screamer:', CARPETA + SUSTOS[indiceSusto]);
+  };
+  imagenSusto.src = CARPETA + SUSTOS[indiceSusto];
   const f = $('scare').querySelector('.flash'); f.style.animation = 'none'; f.offsetHeight; f.style.animation = '';
   mostrar('scare'); grito();
   if (navigator.vibrate) navigator.vibrate([200, 80, 300]);

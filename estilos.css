@@ -9,7 +9,7 @@ p{color:#999;font-family:Georgia,serif;font-size:clamp(14px,2vw,18px);max-width:
 button{font-family:inherit;font-size:30px;padding:10px 40px;background:#200;color:#e00;border:2px solid #900;box-shadow:0 0 18px #900;transition:.2s}
 button:hover{background:#900;color:#fff;box-shadow:0 0 35px #f00}
 #scare{z-index:50;background:radial-gradient(#a00,#000);overflow:hidden;gap:0}
-#scare img{display:block;width:100vw;height:100vh;object-fit:cover;animation:sacudir .06s infinite,zoom 2.4s forwards}
+#scare img{display:block;width:100vw;height:100vh;object-fit:contain;animation:sacudir .06s infinite,zoom 2.4s forwards}
 #scare .flash{position:absolute;inset:0;background:#fff;animation:flash .5s forwards}
 /* cursor personalizado de la página (menús) */
 #luz{position:fixed;z-index:99;width:70px;height:70px;margin:-35px 0 0 -35px;border-radius:50%;pointer-events:none;
