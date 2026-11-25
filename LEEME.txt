@@ -1,0 +1,28 @@
+EL LABERINTO - VERSION CORREGIDA
+================================
+
+COMO ABRIRLO
+1. Extrae toda la carpeta del ZIP.
+2. Abre index.html con un navegador actualizado (Chrome, Edge o Firefox).
+3. Pulsa ENTRAR y mueve el cubo con W, A, S y D.
+
+CORRECCIONES INCLUIDAS
+- Se corrigieron las rutas de las imágenes (ahora usan img/).
+- El fondo ya no queda tapado por la capa de oscuridad en el menú y en las pantallas finales.
+- Se agregaron imágenes SVG de respaldo para el fondo, el cubo, el título, la victoria y los seis sustos.
+- Si faltan las imágenes JPG/PNG originales, el juego usa automáticamente los SVG incluidos.
+- Se agregó una comprobación de carga de imágenes y se evitó que la falta de soporte de audio impida iniciar el juego.
+
+TUS IMAGENES PERSONALIZADAS
+Puedes reemplazar los SVG de respaldo agregando tus archivos originales en la carpeta img con estos nombres:
+  fondo.jpg
+  cubo.jpg
+  titulo.png
+  victoria.jpg
+  susto1.jpg, susto2.jpg, susto3.jpg, susto4.jpg, susto5.jpg, susto6.jpg
+
+Los archivos JPG/PNG tienen prioridad. Si alguno no existe, se mostrará automáticamente su SVG de respaldo.
+No cambies los nombres de los SVG de respaldo porque el juego los necesita cuando falta una imagen original.
+
+IMPORTANTE
+Mantén index.html, estilos.css, juego.js y la carpeta img juntos. No muevas los archivos fuera de esa estructura.

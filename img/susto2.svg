@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+<defs><radialGradient id="bg"><stop stop-color="#3b1118"/><stop offset="1" stop-color="#100306"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="18"/></filter><linearGradient id="skin" x2="0" y2="1"><stop stop-color="#3b1118"/><stop offset="1" stop-color="#100306"/></linearGradient></defs>
+<rect width="600" height="600" fill="url(#bg)"/><circle cx="300" cy="280" r="245" fill="#ffb22e" opacity=".18" filter="url(#glow)"/>
+<path d="M300 85 C185 85 165 185 183 300 C198 385 240 430 300 435 C360 430 402 385 417 300 C435 185 415 85 300 85Z" fill="url(#skin)" stroke="#ffb22e" stroke-width="8"/>
+<path d="M205 225Q250 180 280 225Q245 265 205 225Z M320 225Q350 180 395 225Q355 265 320 225Z" fill="#ffe4ce"/>
+<ellipse cx="247" cy="225" rx="12" ry="20" fill="#ffb22e"/><ellipse cx="355" cy="225" rx="12" ry="20" fill="#ffb22e"/>
+<path d="M300 235L278 300L310 305" fill="none" stroke="#100306" stroke-width="13" stroke-linecap="round"/>
+<path d="M245 330 Q300 360 355 330 Q300 405 245 330Z" fill="#030204" stroke="#ffb22e" stroke-width="7"/>
+<path d="M260 337L270 365L282 340L295 371L310 340L326 365L340 337" fill="none" stroke="#ffe4ce" stroke-width="7"/>
+<path d="M185 150L225 115M415 150L375 115" stroke="#ffb22e" stroke-width="12" opacity=".55"/>
+<rect x="8" y="8" width="584" height="584" rx="20" fill="none" stroke="#ffb22e" stroke-width="6" opacity=".5"/>
+</svg>
