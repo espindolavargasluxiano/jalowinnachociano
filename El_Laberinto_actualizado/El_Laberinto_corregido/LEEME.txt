@@ -1,0 +1,29 @@
+EL LABERINTO - VERSION ACTUALIZADA
+=================================
+
+COMO ABRIRLO
+1. Extrae toda la carpeta del ZIP.
+2. Abre index.html con Chrome, Edge o Firefox actualizado.
+3. Pulsa ENTRAR y mueve el cubo con W, A, S y D.
+
+CAMBIOS DE ESTA VERSION
+- Se incorporaron las cinco imágenes de susto que enviaste (susto1.jpg a susto5.jpg).
+- Se eliminaron los screamers SVG de prueba de la versión anterior.
+- Al perder, se muestra al azar una de tus cinco imágenes.
+- Las mismas imágenes se precargan para la criatura que acecha durante la partida.
+- Se incorporaron tu imagen de cubo (cubo.jpg) y tu fondo.
+- El fondo se guarda como fondo.webp porque el archivo recibido era WebP aunque tuviera extensión .jpg.
+- En la pantalla inicial queda un solo título: el logo gráfico.
+- Se conservan las imágenes SVG de respaldo del título y de victoria, además del fondo y cubo de respaldo.
+
+ARCHIVOS DE IMAGEN
+img/cubo.jpg
+img/fondo.webp
+img/susto1.jpg a img/susto5.jpg
+img/titulo.svg
+img/victoria.svg
+img/fondo.svg (respaldo)
+img/cubo.svg (respaldo)
+
+IMPORTANTE
+Mantén index.html, estilos.css, juego.js y la carpeta img juntos. No muevas los archivos fuera de esa estructura.

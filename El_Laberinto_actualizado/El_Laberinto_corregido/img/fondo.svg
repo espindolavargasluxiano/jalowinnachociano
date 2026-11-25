@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs>
+ <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#170608"/><stop offset=".55" stop-color="#31090d"/><stop offset="1" stop-color="#080304"/></linearGradient>
+ <radialGradient id="glow"><stop stop-color="#a51b24" stop-opacity=".75"/><stop offset="1" stop-color="#190306" stop-opacity="0"/></radialGradient>
+ <linearGradient id="floor" x2="0" y2="1"><stop stop-color="#25080b"/><stop offset="1" stop-color="#020203"/></linearGradient>
+ <filter id="blur"><feGaussianBlur stdDeviation="28"/></filter>
+</defs>
+<rect width="1600" height="900" fill="#030203"/><rect x="0" y="0" width="1600" height="650" fill="url(#wall)"/>
+<ellipse cx="800" cy="550" rx="520" ry="360" fill="url(#glow)" filter="url(#blur)"/>
+<!-- distant corridor -->
+<path d="M0 0H1600V610L1030 510H570L0 610Z" fill="#090305" opacity=".6"/>
+<path d="M0 0L510 180L625 620L0 800Z" fill="#17070a"/><path d="M1600 0L1090 180L975 620L1600 800Z" fill="#130609"/>
+<path d="M0 0L510 180L800 150L1090 180L1600 0" fill="none" stroke="#5b1119" stroke-width="16" opacity=".32"/>
+<path d="M0 900L610 500H990L1600 900Z" fill="url(#floor)"/>
+<path d="M800 500L800 900M610 500L250 900M990 500L1350 900M700 500L530 900M900 500L1070 900" stroke="#6d1820" stroke-width="3" opacity=".25"/>
+<path d="M0 730L640 550H960L1600 730" fill="none" stroke="#68111a" stroke-width="5" opacity=".2"/>
+<!-- far doorway -->
+<rect x="716" y="285" width="168" height="244" rx="5" fill="#050204" stroke="#861d29" stroke-width="12"/>
+<rect x="739" y="307" width="122" height="222" fill="#4b0a13"/><rect x="755" y="325" width="90" height="204" fill="#a11c29" opacity=".25"/>
+<ellipse cx="800" cy="515" rx="210" ry="40" fill="#a41422" opacity=".25" filter="url(#blur)"/>
+<!-- broken wall marks -->
+<g fill="none" stroke="#8c1b25" opacity=".22" stroke-width="5"><path d="M120 180l65 50-34 70 80 55M1400 140l-50 90 48 70-76 80M300 380l50 28-20 55M1280 360l-60 35 22 58"/></g>
+<g fill="#bd343a" opacity=".22"><circle cx="220" cy="700" r="4"/><circle cx="1200" cy="620" r="3"/><circle cx="980" cy="780" r="5"/><circle cx="460" cy="540" r="3"/></g>
+<rect width="1600" height="900" fill="url(#glow)" opacity=".2"/>
+</svg>

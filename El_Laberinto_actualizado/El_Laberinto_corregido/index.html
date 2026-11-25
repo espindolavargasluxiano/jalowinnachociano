@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EL LABERINTO</title>
+<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<canvas id="fondo"></canvas>
+<canvas id="juego"></canvas>
+<canvas id="oscuridad"></canvas>
+<div id="luz"></div>
+
+<div class="pantalla on" id="menu">
+  <img class="logo" id="imgTitulo" alt="Logo de El Laberinto">
+  <p>Eres un cubo perdido en la oscuridad. Muévete con <b>W A S D</b>. Si rozas una pared de sangre… algo te estará esperando.</p>
+  <p style="color:#a33">Sube el volumen. Usa auriculares si te atreves.</p>
+  <button id="btnEntrar">ENTRAR</button>
+</div>
+
+<div class="pantalla" id="derrota">
+  <h1>HAS MUERTO</h1>
+  <button id="btnReintentar">REINTENTAR</button>
+</div>
+
+<div class="pantalla" id="victoria">
+  <img class="logo" id="imgVictoria" alt="Imagen de victoria">
+  <h1 style="color:#0a0;text-shadow:0 0 25px #0f0">ESCAPASTE… POR AHORA</h1>
+  <button id="btnOtra">OTRO LABERINTO</button>
+</div>
+
+<div class="pantalla" id="scare"><img id="imgScare" alt="Susto del laberinto"><div class="flash"></div></div>
+
+<script src="juego.js"></script>
+</body>
+</html>

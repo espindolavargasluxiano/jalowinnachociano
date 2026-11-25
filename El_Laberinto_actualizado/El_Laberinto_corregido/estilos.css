@@ -1,0 +1,20 @@
+*{margin:0;padding:0;box-sizing:border-box;cursor:none!important}
+html,body{height:100%;overflow:hidden;background:#000;font-family:'Creepster',Georgia,serif;color:#c00}
+canvas{position:fixed;inset:0;width:100%;height:100%;display:block}
+.pantalla{position:fixed;inset:0;z-index:10;display:none;flex-direction:column;align-items:center;justify-content:center;gap:22px;text-align:center;background:rgba(0,0,0,.58)}
+.pantalla.on{display:flex}
+h1{font-size:clamp(40px,9vw,110px);color:#b00000;text-shadow:0 0 25px #f00,0 6px 0 #300;letter-spacing:4px;animation:parpadeo 3s infinite}
+p{color:#999;font-family:Georgia,serif;font-size:clamp(14px,2vw,18px);max-width:560px;padding:0 16px}
+.logo{max-height:28vh;max-width:80vw}
+button{font-family:inherit;font-size:30px;padding:10px 40px;background:#200;color:#e00;border:2px solid #900;box-shadow:0 0 18px #900;transition:.2s}
+button:hover{background:#900;color:#fff;box-shadow:0 0 35px #f00}
+#scare{z-index:50;background:radial-gradient(#a00,#000);overflow:hidden;gap:0}
+#scare img{display:block;width:100vw;height:100vh;object-fit:contain;animation:sacudir .06s infinite,zoom 2.4s forwards}
+#scare .flash{position:absolute;inset:0;background:#fff;animation:flash .5s forwards}
+/* cursor personalizado de la página (menús) */
+#luz{position:fixed;z-index:99;width:70px;height:70px;margin:-35px 0 0 -35px;border-radius:50%;pointer-events:none;
+ background:radial-gradient(rgba(255,240,200,.95) 0 4px,rgba(255,170,80,.35) 12px,rgba(255,120,40,0) 35px)}
+@keyframes sacudir{0%{transform:translate(-14px,10px) scale(1.15)}25%{transform:translate(16px,-12px) scale(1.2)}50%{transform:translate(-10px,-14px) scale(1.15)}75%{transform:translate(12px,14px) scale(1.22)}100%{transform:translate(-14px,10px) scale(1.15)}}
+@keyframes zoom{from{filter:contrast(1.3) saturate(1.5)}to{filter:contrast(2) saturate(2) brightness(1.3)}}
+@keyframes flash{from{opacity:1}to{opacity:0}}
+@keyframes parpadeo{0%,92%,96%,100%{opacity:1}94%,98%{opacity:.3}}
